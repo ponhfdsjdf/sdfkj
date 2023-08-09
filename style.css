@@ -1,0 +1,196 @@
+/* Общие стили для всех страниц */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f0f0f0;
+    background-image: url("imag.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #800080;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px;
+}
+
+/* Стили для ссылок в навигации */
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #555;
+    color: #800080;
+    transform: scale(1.1);
+}
+
+main {
+    animation: fadeIn 0.5s ease;
+    padding: 20px;
+}
+
+/* Стили для заголовков */
+h2, h3 {
+    margin: 0;
+    padding: 0;
+    color: #800080;
+}
+
+h1 {
+    color: White;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Стили для параграфов */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Анимация для перехода между страницами */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для формы обратной связи на странице "Контакты" */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none; /* Убрали границы для элементов формы */
+    background-color: #f0f0f0; /* Добавили фоновый цвет для полей ввода */
+    border-radius: 3px;
+}
+
+form button {
+    background-color: #800080;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #800080;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Стили для секций на странице "О нас" и "Контакты" */
+section {
+    margin-bottom: 30px;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #800080;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Добавили тень для подвала */
+}
+
+.footer-contact {
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 5px;
+}
+
+.footer-contact p:first-child {
+    font-weight: bold;
+}
+
+.footer-contact p:last-child {
+    font-style: italic;
+}
+
+.footer-copyright {
+    font-size: 12px;
+}
+
+/* Стили для галереи на странице "Галерея" */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border: none; /* Убрали границу для изображений в галерее */
+}
+
+/* Отзывчивые стили */
+@media screen and (max-width: 768px) {
+    /* Стили для ширины экрана до 768px (телефоны и планшеты) */
+    main {
+        padding: 10px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
